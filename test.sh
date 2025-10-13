@@ -2,8 +2,8 @@
 
 # --- 設定 ---
 URL="http://127.0.0.1:3000/test"
-CONCURRENCY=10     # C: 同時リクエスト数
-TOTAL_REQUESTS=10   # N: 総リクエスト数
+CONCURRENCY=1000     # C: 同時リクエスト数
+TOTAL_REQUESTS=1000   # N: 総リクエスト数
 TIMEOUT=20          # abのタイムアウトを20秒に設定
 
 # 負荷テストを実行する関数
@@ -18,4 +18,4 @@ function run_test() {
 }
 
 # --- 検証開始 ---
-run_test "シングルスレッド"
+run_test "スレッド"

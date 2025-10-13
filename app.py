@@ -27,13 +27,13 @@ def main(value):
 
 def single_thread():
     print('=========シングルスレッド=========')
-    app.run(host='0.0.0.0', port=PORT, debug=False)
-
-def single_thread():
-    print('=========マルチスレッド=========')
     app.run(host='0.0.0.0', port=PORT, threaded=False, debug=False)
+
+def multi_thread():
+    print('=========マルチスレッド=========')
+    app.run(host='0.0.0.0', port=PORT, debug=False)
 
 
 if __name__ == "__main__":
-    # app.run(host='0.0.0.0', port=PORT, threaded=False, debug=False)
-    app.run(host='0.0.0.0', port=PORT, debug=False)
+    # single_thread()
+    multi_thread()
